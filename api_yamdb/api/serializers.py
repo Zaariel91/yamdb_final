@@ -124,5 +124,5 @@ class ReviewSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(
                 'Нельзя оставить больше одного обзора.')
 
-        review = Review.objects.create(**validated_data,)
-        return review
+        return  Review.objects.create(**validated_data,)
+
