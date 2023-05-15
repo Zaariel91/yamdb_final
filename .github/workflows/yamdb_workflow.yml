@@ -58,11 +58,11 @@ jobs:
         # Пуш образа в Docker Hub 
         uses: docker/build-push-action@v2 
         with:
-          push: true
-         # tags: zaariel91/python_docker:latest
-          tags: zaariel91/yamdb_final
+          context: api_yamdb/
           file: api_yamdb/Dockerfile
-  
+          push: true
+          tags: zaariel91/yamdb_final
+         
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
