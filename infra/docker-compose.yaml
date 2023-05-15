@@ -11,7 +11,7 @@ services:
 
   web:
     #build: ../api_yamdb/
-    image: zaariel91/python_docker
+    image: zaariel91/yamdb_final
     restart: always
     volumes:
       - static_value:/app/static/
